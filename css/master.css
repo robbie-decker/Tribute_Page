@@ -1,0 +1,35 @@
+nav ul{
+  display: flex;
+  flex-direction: row;
+  color: red;
+  background-color: gray;
+  justify-content: space-around;
+  padding: .5em;
+  margin: 0;
+  list-style-type: none;
+}
+
+body{
+  margin: 0;
+}
+
+div.image{
+  background-color: black;
+  color: red;
+  padding: 10em 0em 10em 0em;
+  background-image: url(https://64.media.tumblr.com/32acff3fab3594288c01c4ea751cc97d/tumblr_mz942xsIRf1t8r9cuo1_400.gifv);
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-position: center;
+}
+
+div img{
+  display: block;
+  margin: auto;
+  width: 250px;
+  height: 250px;
+}
+
+h1{
+  margin: 0;
+}
