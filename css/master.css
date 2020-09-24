@@ -1,3 +1,11 @@
+
+
+*{
+  font-family: Arial;
+  --main-color: #FF3131;
+  --second: #1d9999
+}
+
 nav ul{
   display:flex;
   flex-direction: row;
@@ -5,7 +13,25 @@ nav ul{
   list-style: none;
 }
 
+h1{
+  position: absolute;
+  font-size: 50px;
+  top: 100px;
+
+}
+
+h2{
+  text-align: center;
+  display: block;
+  font-size: 40px;
+}
+
+h4{
+  text-align: center;
+}
+
 .container1{
+  background-color: var(--main-color);
   display:grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:"nav nav"
@@ -32,10 +58,11 @@ nav ul{
   grid-area:image;
   background-color: gray;
   background-image:url(https://themindofandrewgilmore.files.wordpress.com/2016/04/giphy-11.gif?w=344&h=240);
+  background-size: 60% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 100px 100px 100px 10px;
-  margin: 0px 0px 250px 0px;
+  padding: 250px 100px 100px 10px;
+  margin: 0px 0px 200px 0px;
 
 }
 .three{
@@ -50,17 +77,43 @@ div.five img{
   display: block;
   margin: 0 auto;
 }
+div.three p{
+  font-size: 25px;
+  font-weight: 600;
+}
+
 .five{
   grid-area:mario;
 }
 
+.boxes{
+  margin: 20px 5px;
+  padding: 25px 25px;
+  border: 10px solid var(--second);
+}
 
-.six{grid-area:star120;}
-.seven{grid-area:star70;}
-.eight{grid-area:star16;}
+.six{
+    grid-area:star120;
+    padding: 25px 25px;
+  }
+.seven{
+    grid-area:star70;
+    padding: 25px 25px;
+  }
+.eight{
+  grid-area:star16;
+  padding: 25px 25px;
+}
 .nine{grid-area:tas;}
 .ten{grid-area:twitch;}
-.eleven{grid-area:care;}
+.eleven{
+    grid-area:care;
+    margin: 0 0 50px 0;
+  }
+
+.center{
+  text-align: center;
+}
 
 footer{
   display: flex;
