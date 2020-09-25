@@ -1,5 +1,3 @@
-
-
 *{
   font-family: Arial;
   --main-color: #FF3131;
@@ -10,7 +8,14 @@
   --lwhite: #F2F2F2;
 }
 
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
 nav ul{
+  margin: 10px;
   display:flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -57,6 +62,7 @@ h4{
 }
 
 .container2{
+  margin: 80px 0 0 0;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:"star120 star70 star16"
@@ -83,6 +89,7 @@ h4{
 .three{
   grid-area:history;
   background-color: var(--lwhite);
+
 }
 
 .four{
@@ -118,6 +125,7 @@ div.three p{
 .six{
     grid-area:star120;
     padding: 25px 25px;
+
   }
 .seven{
     grid-area:star70;
@@ -127,14 +135,18 @@ div.three p{
   grid-area:star16;
   padding: 25px 25px;
 }
-.nine{grid-area:tas;}
+.nine{
+  grid-area:tas;
+  margin: 40px 0;
+}
 .ten{
   grid-area:twitch;
   background-color: var(--lwhite);
+  margin: 40px 0;
 }
 .eleven{
     grid-area:care;
-    margin: 0 0 50px 0;
+    margin: 40px 0 60px 0;
   }
 
 .center{
@@ -156,6 +168,14 @@ i{
   font-size: 20px;
 }
 
+.image{
+  display: block;
+  margin: 0 auto;
+  height: 55%;
+  width: 60%;
+
+}
+
 footer{
   display: flex;
   justify-content: center;
@@ -164,4 +184,26 @@ footer{
   min-width: 100%;
   left: 0;
   bottom: 0px;
+}
+
+@media screen and (max-width: 768px){
+  .container1{
+    grid-template-areas: "nav"
+                          "image"
+                          "history"
+                          "context"
+                          "mario";
+    justify-content: center;
+  }
+
+  .container2{
+    grid-template-areas: "star120"
+                          "star70"
+                          "star16"
+                          "tas"
+                          "twitch"
+                          "care";
+   justify-content: center;
+  }
+
 }
