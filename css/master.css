@@ -20,7 +20,8 @@ nav ul{
   flex-direction: row;
   justify-content: space-evenly;
   list-style: none;
-
+  font-weight: 600;
+  text-decoration: none;
 }
 
 h1{
@@ -139,10 +140,12 @@ div.three p{
 
 a{
   color: #5D2490;
+  text-decoration: none;
 }
 
 a:hover, a:active{
   color: var(--third);
+  text-decoration: none;
 }
 
 .six{
