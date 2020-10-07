@@ -22,6 +22,7 @@ nav ul{
   list-style: none;
   font-weight: 600;
   text-decoration: none;
+
 }
 
 h1{
@@ -49,13 +50,13 @@ h4{
 }
 
 .slim-text{
-  width: 500px;
+  //width: 50vw;
   margin: auto;
 }
 
 .container1{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  //grid-template-columns: 1fr 1fr;
   grid-template-areas:"nav nav"
                       "image image"
                       "image image"
@@ -67,9 +68,8 @@ h4{
 .container2{
   margin: 80px 0 0 0;
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:"star120 star70 star16"
-                      "tas tas twitch"
+  //grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:"tas tas twitch"
                       "tas tas twitch"
                       "care care twitch";
 }
@@ -82,7 +82,7 @@ h4{
   grid-area:image;
   background-color: var(--third);
   background-image:url(https://themindofandrewgilmore.files.wordpress.com/2016/04/giphy-11.gif?w=344&h=240);
-  background-size: 60% 100%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   padding: 250px 100px 200px 10px;
@@ -96,6 +96,7 @@ h4{
 }
 
 .four{
+  padding: 0px 40px;
   grid-area:context;
   border-top: 5px solid var(--second);
   border-radius: 5px;
@@ -104,6 +105,9 @@ h4{
 div.five img{
   display: block;
   margin: 0 auto;
+  width:60%;
+  height auto;
+  max-width: 400px;
 }
 div.three p{
   font-size: 25px;
@@ -148,22 +152,29 @@ a:hover, a:active{
   text-decoration: none;
 }
 
+.categories{
+  display: flex;
+  flex-direction: row;
+  margin: 60px 20px;
+}
+
 .six{
-    grid-area:star120;
+    //grid-area:star120;
     padding: 25px 25px;
 
   }
 .seven{
-    grid-area:star70;
+    //grid-area:star70;
     padding: 25px 25px;
   }
 .eight{
-  grid-area:star16;
+  //grid-area:star16;
   padding: 25px 25px;
 }
 .nine{
   grid-area:tas;
   margin: 40px 0;
+  padding: 0px 40px;
   border-top: 5px solid var(--second);
   border-radius: 5px;
 }
@@ -171,11 +182,13 @@ a:hover, a:active{
   grid-area:twitch;
   background-color: var(--lwhite);
   margin: 40px 0;
+  padding: 0px 40px;
   border-radius: 5px;
 }
 .eleven{
     grid-area:care;
     margin: 40px 0 60px 0;
+    padding: 0px 40px;
     border-top: 5px solid var(--second);
     border-radius: 5px;
   }
@@ -201,16 +214,22 @@ i{
 .small-image{
   display: block;
   margin: 30px auto;
-  height: 30%;
+  height: auto;
   width: 30%;
 }
 
+.hidden{
+  min-width: 80px;
+}
 
+.not-hidden{
+    min-width: 80px;
+}
 
 .image{
   display: block;
   margin: 0 auto;
-  height: 55%;
+  height: auto;
   width: 60%;
 }
 
@@ -239,13 +258,48 @@ footer{
   }
 
   .container2{
-    grid-template-areas: "star120"
-                          "star70"
-                          "star16"
-                          "tas"
+    grid-template-areas:  "tas"
                           "twitch"
                           "care";
    justify-content: center;
   }
 
+  .categories{
+    display: flex;
+    flex-direction: column;
+    margin: 0 60px;
+  }
+
+  .hidden{
+    display: none;
+
+  }
+  .not-hidden{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
 }
+
+@media screen and (min-width: 1280px){
+  body{
+    margin: 0 auto;
+    width: 1280px;
+  }
+}
+  @media screen and (max-width: 940px){
+    .column{
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hidden{
+      min-width: 180px;
+      margin: 5px auto;
+    }
+    .not-hidden{
+      min-width: 180px;
+      margin: 5px auto;
+    }
+  }
